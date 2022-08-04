@@ -2,12 +2,12 @@
   <header>
     <div class="container">
       <nav>
-        <a href="/"
+        <router-link to="/"
           ><img
             src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/wdev.svg"
             alt="wdev logo"
             id="logo"
-        /></a>
+        /></router-link>
 
         <img
           src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/menu.svg"
@@ -29,10 +29,24 @@
             @click="changeStateOfMenu"
           />
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">Videos</a></li>
-            <li><a href="/">Sobre</a></li>
-            <li><a href="/">Contato</a></li>
+            <li>
+              <router-link @click="changeStateOfMenu" to="/">Home</router-link>
+            </li>
+            <li>
+              <router-link @click="changeStateOfMenu" to="/videos"
+                >Videos</router-link
+              >
+            </li>
+            <li>
+              <router-link @click="changeStateOfMenu" to="/sobre"
+                >Sobre</router-link
+              >
+            </li>
+            <li>
+              <router-link @click="changeStateOfMenu" to="/contatos"
+                >Contato</router-link
+              >
+            </li>
           </ul>
         </div>
       </nav>
@@ -115,26 +129,26 @@ ul li {
 ul li a {
   color: var(--color-text-light);
 }
-@media (min-width:700px){
-    #menu-button,
-    #menu-logo,
-    #menu-overlay{
-        display: none;
-    }
-    #menu-items{
-        display: flex;
-        position: static;
-        height: 60px;
-        width: auto;
-    }
-    ul{
-        display: flex;
-        height: 60px;
-        align-items: center;
-    }
-    ul li{
-        margin: 0;
-        margin-left: 10px;
-    }
+@media (min-width: 700px) {
+  #menu-button,
+  #menu-logo,
+  #menu-overlay {
+    display: none;
+  }
+  #menu-items {
+    display: flex;
+    position: static;
+    height: 60px;
+    width: auto;
+  }
+  ul {
+    display: flex;
+    height: 60px;
+    align-items: center;
+  }
+  ul li {
+    margin: 0;
+    margin-left: 10px;
+  }
 }
 </style>

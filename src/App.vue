@@ -1,25 +1,19 @@
 <template>
   <TheHeader />
-  <Home />
+  <router-view path="$router.key"> </router-view>
   <TheFooter />
 </template>
 
 <script>
-import './styles/global.css'
-import TheHeader from './components/TheHeader.vue'
-import Home from './pages/Home.vue'
-import TheFooter from './components/TheFooter.vue'
+import "./styles/global.css";
+import TheHeader from "./components/TheHeader.vue";
+import TheFooter from "./components/TheFooter.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     TheHeader,
-    Home,
-    TheFooter
-}
-}
+    TheFooter,
+  },
+};
 </script>
-
-<style>
- 
-</style>
